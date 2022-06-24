@@ -1,0 +1,150 @@
+@import "mixin";
+@import "button";
+
+nav {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: $cBlack;
+    padding: 20px 70px;
+    list-style: none;
+
+    li {
+      font-size: 20px;
+    }
+
+    a {
+      color: $cWhite;
+      text-decoration: none;
+    }
+  }
+}
+
+.section_title {
+  font-size: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#top {
+  height: 700px;
+  background: url("../img/top.png") no-repeat center;
+  background-size: cover;
+}
+
+.top {
+  &_wrap {
+    h1 {
+      font-size: 60px;
+      color: $cWhite;
+      float: right;
+      margin: 275px;
+    }
+  }
+}
+
+#service {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.service {
+  &_wrap {
+    @include flex;
+  }
+
+  &_left {
+    width: 50%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &_right {
+    h3 {
+      color: $cBlack;
+      font-size: 20px;
+      padding: 20px 0px;
+    }
+
+    p {
+      font-size: 15px;
+      color: $cGray;
+    }
+  }
+}
+
+#price {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.price {
+  &_wrap {
+    table {
+      border: double $cBlack 10px;
+      width: 100%;
+      text-align: center;
+
+      th {
+        border: solid $cBlack 2px;
+        padding: 10px;
+      }
+
+      td {
+        border: solid $cBlack 2px;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+#contact {
+  background: #f1f1f1;
+}
+
+.contact {
+  h2 {
+    padding: 40px 0;
+  }
+
+  .form {
+    width: 70%;
+    margin: 0 auto;
+  }
+  label {
+    display: inline-block;
+    width: 30%;
+    line-height: 2;
+  }
+
+  input,
+  textarea {
+    box-sizing: border-box;
+    border: solid $cWhite 1px;
+    width: 65%;
+    margin-bottom: 15px;
+  }
+
+  input {
+    padding: 6px;
+  }
+
+  textarea {
+    vertical-align: top;
+    height: 200px;
+  }
+
+  .button {
+    @include button;
+  }
+}
+
+#footer {
+  background-color: $cBlack;
+  padding: 50px;
+  text-align: center;
+  color: $cWhite;
+}
